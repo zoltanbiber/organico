@@ -2,13 +2,31 @@
 <html>
 <head>
   <title>Organico</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="main-wrapper">
+  <header>
+    <nav id="nav-wrapper">
+      <h1 id="logo">Organico</h1>
+      <ul>
+        <li><a href="#">about</a></li>
+        <li><a href="#">food for thought</a></li>
+        <li><a href="#">register</a></li>
+        <li><a href="#">sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+</div>
+
 
 </body>
 </html>
