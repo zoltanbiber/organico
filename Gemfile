@@ -47,4 +47,5 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'capybara'
   gem 'database_cleaner', '~> 1.3.0'
+  gem 'cucumber-rails', :require => false
 end
