@@ -48,4 +48,5 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.3.0'
   gem 'cucumber-rails', :require => false
+  gem 'launchy'
 end
