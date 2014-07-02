@@ -1,4 +1,4 @@
-Given(/^that we have at least (\d+) shops in the database$/) do |arg1|
+Given(/^that we have at least ten shops in the database$/) do
   12.times do
     Shop.create!(
       name: Faker::Company.name, 
@@ -21,9 +21,10 @@ end
 
 When(/^the user visits the homepage$/) do
   visit root_path
+  save_and_open_page
 end
 
-Then(/^he should see the first (\d+) shops on the page$/) do |arg1|
-  page.should have_content('shop@shop.org')
-  page.should have_content('United Kingdom')
+Then(/^he should see the first ten shops on the page$/) do
+  expect(page).to have_content 'shop@shop.org'
+  expect(page).to have_content 'United Kingdom'
 end
