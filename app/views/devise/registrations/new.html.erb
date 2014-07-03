@@ -4,8 +4,8 @@
   <%= devise_error_messages! %>
 
 
-  <%= label_tag 'user-type-select-box', 'Please select if you are a shopper or a merchant' %>
-  <%= select_tag "user-type-select-box", "<option selected='selected'>shopper</option><option>merchant</option>".html_safe %>
+  <div><%= f.label :type, 'Please select if you are a shopper or a merchant' %><br />
+  <%= f.select(:type, %w(Shopper Merchant)) %></div>
 
   <div><%= f.label :username %><br />
   <%= f.text_field :username, autofocus: true %></div>

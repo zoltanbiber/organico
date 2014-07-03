@@ -3,7 +3,7 @@ Given(/^that a user is on the registration page$/) do
 end
 
 When(/^a user chooses to be a shopper$/) do
-  select('shopper', :from => 'user-type-select-box')
+  select('Shopper', :from => 'user_type')
 end
 
 When(/^the user completes the form with valid shopper information$/) do
@@ -16,7 +16,7 @@ end
 
 Then(/^the shopper's account should be created$/) do
   page.should have_content('Welcome! You have signed up successfully.')
-  User.first.email.should eq("shopper@shopper.org")
+  Shopper.first.email.should eq("shopper@shopper.org")
 end
 
 Then(/^their user type \(shopper\) should be recorded$/) do
@@ -24,7 +24,7 @@ Then(/^their user type \(shopper\) should be recorded$/) do
 end
 
 When(/^a user chooses to be a merchant$/) do
-  select('merchant', :from => 'user-type-select-box')
+  select('Merchant', :from => 'user_type')
 end
 
 When(/^the user completes the form with valid merchant information$/) do
@@ -37,7 +37,7 @@ end
 
 Then(/^the merchant's should be created$/) do
   page.should have_content('Welcome! You have signed up successfully.')
-  User.first.email.should eq("merchant@merchant.org")
+  Merchant.first.email.should eq("merchant@merchant.org")
 end
 
 Then(/^their user type \(merchant\) should be recorded$/) do
