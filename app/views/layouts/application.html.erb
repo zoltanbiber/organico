@@ -15,12 +15,13 @@
     <nav id="nav-wrapper">
       <%= image_tag "logo_on_green.png" %>
       <h1 id="logo">Organico</h1>
-      <ul>
+      <ul class="hmenu">
         <li><a href="#">about</a></li>
         <li><a href="#">food for thought</a></li>
-        <li><a href="#">register</a></li>
-        <li><a href="#">sign in</a></li>
+        <%= render 'devise/menu/registration_items' %>
+        <%= render 'devise/menu/login_items' %>
       </ul>
+
     </nav>
   </header>
 
