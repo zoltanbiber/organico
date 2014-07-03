@@ -10,7 +10,7 @@
   <div><%= f.label :username %><br />
   <%= f.text_field :username, autofocus: true %></div>
 
-  <div><%= f.label :company_name %><br />
+  <div><%= f.label :company_name %><%= f.label " (Please type N/A if you are a shopper)" %><br />
   <%= f.text_field :company_name %></div>
 
   <div><%= f.label :email %><br />
