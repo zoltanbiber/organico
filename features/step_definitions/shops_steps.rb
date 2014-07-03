@@ -21,7 +21,7 @@ end
 
 When(/^the user visits the homepage$/) do
   visit root_path
-  save_and_open_page
+  # save_and_open_page
 end
 
 Then(/^he should see the first ten shops on the page$/) do
