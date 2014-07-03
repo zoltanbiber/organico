@@ -1,0 +1,28 @@
+<div>
+  <p>Welcome. Organico helps you find merchants selling organic products by location</p>
+</div>
+<div id="shops-wrapper">
+  <div id="search-shops-div">
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Search shops in your area") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search", id: "search-submit-button") %>
+    <% end %>
+  </div>
+  <div id="shops-div">
+    <ul>
+    <% @shops.each do |shop| %>
+      <li>
+        <%= shop.name %><br />
+        <%= shop.address_city %>,
+        <%= shop.address_street %>,
+        <%= shop.address_postcode %>
+      </li>
+    <% end %>
+    <ul>
+  </div>
+</div>
+<div id="google-maps-div">
+  <p>GOOGLE MAPS<BR /> GOES HERE</p>
+</div>
+<div class="clear-both"></div>

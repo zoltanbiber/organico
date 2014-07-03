@@ -23,9 +23,13 @@
   display: inline-block;
  }
 
+ #nav-wrapper {
+  padding-bottom: 30px;
+ }
+
  #nav-wrapper ul {
   display: inline-block;
-  width: 430px;
+  width: 500px;
   float: right;
   position: relative;
   top: 20px;
@@ -51,4 +55,52 @@
  #nav-wrapper ul li a {
   text-decoration: none;
   color: #204056;
+ }
+
+ #shops-wrapper {
+  height: 500px;
+  width: 60%;
+  margin-top: 5%;
+  float: left;
+ }
+
+ #google-maps-div {
+  background-color: #F65A5B;
+  height: 500px;
+  width: 40%;
+  margin-top: 5%;
+  float: right; 
+ }
+
+ #google-maps-div p {
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 240px;
+ }
+
+ #search-shops-div {
+  padding: 3%;
+  background-color: #F1F2F2;
+ }
+
+ #search-submit-button {
+  border: none;
+  background-color: #F65A5B;
+  width: 60px;
+  height: 28px;
+ }
+
+ #shops-div {
+  background-color: white;
+ }
+
+ #shops-div li {
+  padding: 10px;
+  border: 1px solid #DDDEDE;
+  margin: 10px 10px 10px 0;
+ }
+
+ .clear-both {
+  clear: both;
  }

@@ -1,12 +1,12 @@
 Given(/^that we have at least ten shops in the database$/) do
   12.times do
     Shop.create!(
-      name: Faker::Company.name, 
+      name: "Mr O's Organic Emporium", 
       opening_hours: Faker::Lorem.sentence, 
       email: "shop@shop.org", 
       phone: Faker::PhoneNumber.phone_number, 
       website: Faker::Internet.url, 
-      address_city: Faker::Address.city,
+      address_city: "London",
       address_street: Faker::Address.street_address,
       address_secondary: Faker::Address.secondary_address,
       address_building: Faker::Address.building_number,
@@ -21,10 +21,9 @@ end
 
 When(/^the user visits the homepage$/) do
   visit root_path
-  # save_and_open_page
 end
 
 Then(/^he should see the first ten shops on the page$/) do
-  expect(page).to have_content 'shop@shop.org'
-  expect(page).to have_content 'United Kingdom'
+  expect(page).to have_content "Mr O's Organic Emporium"
+  expect(page).to have_content 'London'
 end
