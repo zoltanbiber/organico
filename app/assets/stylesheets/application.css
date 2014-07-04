@@ -19,6 +19,10 @@
   margin: auto;
  }
 
+ body {
+  font-family: 'Dosis', sans-serif;
+ }
+
  #logo {
   display: inline-block;
  }
@@ -49,7 +53,6 @@
   float: left;
   font-size: 1.5rem;
   margin-right: 5%;
-  font-family: 'Dosis', sans-serif;
  }
 
  #nav-wrapper ul li a {
@@ -95,10 +98,26 @@
   background-color: white;
  }
 
- #shops-div li {
+ #shops {
   padding: 10px;
   border: 1px solid #DDDEDE;
   margin: 10px 10px 10px 0;
+ }
+
+ #shop-name {
+  font-size: 1.5rem;
+ }
+
+ #tags-container-ul {
+  margin-top: 5px;
+ }
+
+ #tags {
+  display: inline-block;
+  color: #00D2B4;
+  padding: 6px;
+  border-radius: 20px;
+  background-color: #F1F2F2;
  }
 
  .pagination {

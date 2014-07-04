@@ -1,4 +1,10 @@
-Given(/^that we have at least ten shops in the database$/) do
+Given(/^that we have some tags$/) do
+  @first_tag = Tag.create!(:name => "bar")
+  @second_tag = Tag.create!(:name => "restaurant")
+  @third_tag = Tag.create!(:name => "deli")
+end
+
+Given(/^that we have at least ten shops and they have tags$/) do
   12.times do
     Shop.create!(
       name: "Mr O's Organic Emporium", 
@@ -15,6 +21,7 @@ Given(/^that we have at least ten shops in the database$/) do
       address_country: "United Kingdom",
       address_latitude: Faker::Address.latitude,
       address_longitude: Faker::Address.longitude,
+      tags: [@first_tag, @second_tag, @third_tag]
     )
   end 
 end
@@ -26,4 +33,8 @@ end
 Then(/^he should see the first ten shops on the page$/) do
   expect(page).to have_content "Mr O's Organic Emporium"
   expect(page).to have_content 'London'
+end
+
+Then(/^he should also see the shops' tags$/) do
+  expect(page).to have_content "restaurant" 
 end

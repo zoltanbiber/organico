@@ -12,11 +12,22 @@
   <div id="shops-div">
     <ul>
     <% @shops.each do |shop| %>
-      <li>
-        <%= shop.name %><br />
-        <%= shop.address_city %>,
-        <%= shop.address_street %>,
-        <%= shop.address_postcode %>
+      <li id="shops">
+        <span id="shop-name">
+          <%= shop.name %><br />
+        </span>
+        <span id="shop-address">
+          <%= shop.address_city %>,
+          <%= shop.address_street %>,
+          <%= shop.address_postcode %>
+        </span>
+        <ul id="tags-container-ul">
+            <% shop.tags.each do |tag| %>
+              <li id="tags">
+                <%= tag.name %>
+              </li>
+            <% end %>
+        </ul>
       </li>
     <% end %>
     <ul>
