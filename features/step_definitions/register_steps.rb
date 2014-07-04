@@ -7,10 +7,11 @@ When(/^a user chooses to be a shopper$/) do
 end
 
 When(/^the user completes the form with valid shopper information$/) do
+  fill_in 'Username', :with => 'username'
+  fill_in 'Company name', :with => Faker::Company.name
   fill_in 'Email', :with => 'shopper@shopper.org'
   fill_in 'Password', :with => 'password'
   fill_in 'Password confirmation', :with => 'password'
-  fill_in 'Username', :with => 'username'
   click_button('Sign up')
 end
 
@@ -28,6 +29,7 @@ When(/^a user chooses to be a merchant$/) do
 end
 
 When(/^the user completes the form with valid merchant information$/) do
+  fill_in 'Username', :with => 'username'
   fill_in 'Email', :with => 'merchant@merchant.org'
   fill_in 'Password', :with => 'password'
   fill_in 'Password confirmation', :with => 'password'
