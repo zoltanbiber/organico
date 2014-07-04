@@ -26,13 +26,15 @@
     </nav>
   </header>
 
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
+  
   <main>
     <%= yield %>
   </main>
 
   
-  <%= flash[:notice] %>
-  <%= flash[:alert] %>
+
 
 </div>
 
