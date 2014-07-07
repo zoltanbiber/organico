@@ -53,3 +53,5 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'launchy'
 end
+
+gem 'simplecov', :require => false, :group => :test
