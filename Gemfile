@@ -42,6 +42,7 @@ gem 'faker'
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'geocoder'
+gem 'rails_stdout_logging'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
