@@ -41,6 +41,7 @@ gem 'spring',        group: :development
 gem 'faker'
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
+gem 'geocoder'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
