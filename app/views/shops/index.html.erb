@@ -14,11 +14,9 @@
   <div id="shops-div">
     <ul>
     <% @shops.each do |shop| %>
-      <li id="shops">
+      <li class="shops" id="<%= shop.id %>" data-latitude="<%= shop.latitude %>" data-longitude="<%= shop.longitude %>">
         <span id="shop-name">
           <%= shop.name %><br />
-          <%= shop.latitude %>, <%= shop.longitude %>
-          <br />
         </span>
         <span id="shop-address">
           <%= shop.address_city %>,

@@ -120,7 +120,7 @@ body { height: 100%; margin: 0; padding: 0 }
   background-color: white;
  }
 
- #shops {
+ .shops {
   padding: 10px;
   border: 1px solid #DDDEDE;
   margin: 10px 10px 10px 0;
