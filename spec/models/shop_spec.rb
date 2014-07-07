@@ -6,7 +6,9 @@ RSpec.describe Shop, :type => :model do
 
   describe "Geocoding" do
     before do
-      @shop = Shop.create!(
+      # with mocha, stub out geocode method
+      # Shop.any_instance.stubs(:geocode)
+      @shop = Shop.new(
         :name => "Planet Organic", 
         :address_city => "London",
         :address_street => "10 Devonshire Square",
