@@ -19,8 +19,8 @@ Given(/^that we have at least ten shops and they have tags$/) do
       address_postcode: Faker::Address.postcode,
       address_state: Faker::Address.state,
       address_country: "United Kingdom",
-      address_latitude: Faker::Address.latitude,
-      address_longitude: Faker::Address.longitude,
+      latitude: Faker::Address.latitude,
+      longitude: Faker::Address.longitude,
       tags: [@first_tag, @second_tag, @third_tag]
     )
   end 
