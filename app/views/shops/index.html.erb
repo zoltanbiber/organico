@@ -12,7 +12,7 @@
     <% end %>
   </div>
   <div id="shops-div">
-    <ul>
+    <ul id="shops-ul">
     <% @shops.each do |shop| %>
       <li class="shops" id="<%= shop.id %>" data-latitude="<%= shop.latitude %>" data-longitude="<%= shop.longitude %>">
         <span id="shop-name">

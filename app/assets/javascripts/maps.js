@@ -1,5 +1,6 @@
 var map;
-
+var shops;
+var test;
 $(document).ready(function() {
   var options = {
     center: new google.maps.LatLng(51.5, -0.125),
@@ -8,24 +9,26 @@ $(document).ready(function() {
 
   map =  new google.maps.Map($('#map-canvas')[0], options);
 
-  function addMarker(lat, lng) {
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(lat, lng),
-      map: map
-    });
+  shops = document.getElementsByClassName("shops");
+
+  for(var i=0; i<shops.length; i++){
+
+    var latitude = $(shops[i]).data("latitude");
+    var longitude = $(shops[i]).data("longitude");
+    addMarker(latitude, longitude);
+   
+
   }
 
-  var shops = document.getElementById("shop-div");
-
-  _(shops).each(function(shop){
+  // _(shops).each(function(shop){
       
-      console.log(shop.id);
+  //     console.log(shop.id);
     
-      var latitude = $("#" + shop.id).data("latitude");
-      var longitude = $("#" + shop.id).data("longitude");
-      addMarker(latitude, longitude);
+  //     var latitude = $("#" + shop.id).data("latitude");
+  //     var longitude = $("#" + shop.id).data("longitude");
+  //     addMarker(latitude, longitude);
 
-  });
+  // });
 
 // one approach is to initiate a JSON request 
 // and make the Rails controller respond to JSON
@@ -38,4 +41,11 @@ $(document).ready(function() {
 // addMarker(51.528913, -0.077664);
 
 });
+
+  function addMarker(lat, lng) {
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lat, lng),
+      map: map
+    });
+  }
 
