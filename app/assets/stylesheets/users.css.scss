@@ -1,0 +1,25 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-profile-page {
+  background-color: #E6E7E8;
+}
+
+#profile-header {
+  background-color: #F65A5B;
+  padding: 3%;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Dosis', sans-serif;
+}
+
+.user-profile-page li {
+  padding: 2%;
+  border-bottom: 1px solid #DDDEDE;
+}
+
+.user-field-names {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
