@@ -20,7 +20,9 @@
       <ul class="hmenu">
         <li><a href="#">about</a></li>
         <li><a href="#">food for thought</a></li>
-        <li><a href="#">profile</a></li>
+        <% if user_signed_in? %>
+        <li><a href="#">profile</a></li>        
+        <% end %>
         <%= render 'devise/menu/registration_items' %>
         <%= render 'devise/menu/login_items' %>
       </ul>
