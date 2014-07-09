@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.user-profile-page {
+.profile-page {
   background-color: #E6E7E8;
 }
 
-#profile-header {
+.profile-header {
   background-color: #F65A5B;
   padding: 3%;
   color: white;
@@ -14,12 +14,27 @@
   font-family: 'Dosis', sans-serif;
 }
 
-.user-profile-page li {
+.profile-header h3 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.shop-field {
   padding: 2%;
   border-bottom: 1px solid #DDDEDE;
 }
 
-.user-field-names {
+.shop-tags {
+  display: inline-block;
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.profile-field-names {
   font-size: 1.2rem;
   margin-right: 10px;
 }
