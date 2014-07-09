@@ -4,9 +4,9 @@ class ShopsController < ApplicationController
     @shops = Shop.paginate(:page => params[:page], :per_page => 5)
   end
 
-  # def show
-  #   @shop = Shop.find(params[:id])
-  # end
+  def show
+    @shop = Shop.find(params[:id])
+  end
 
   private
   def allowed_params #whitelist

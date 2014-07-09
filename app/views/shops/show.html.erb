@@ -1,0 +1,18 @@
+<div class="profile-page">
+<header class="profile-header">
+  <h3><%= @shop.name %></h3>
+  <ul>
+    <% @shop.tags.each do |tag| %>
+      <li class="shop-tags"><%= tag.name %></li>
+    <% end %>
+  </ul>
+</header>
+
+<ul>
+  <li class="shop-field"><span class="profile-field-names">Address:</span><%= @shop.address_city %>, <%= @shop.address_street %>, <%= @shop.address_postcode %></li>
+  <li class="shop-field"><span class="profile-field-names">Phone:</span><%= @shop.phone %></li>
+  <li class="shop-field"><span class="profile-field-names">Email:</span><%= @shop.email %></li>
+  <li class="shop-field"><span class="profile-field-names">Website:</span><%= @shop.website %></li>
+  <li class="shop-field"><span class="profile-field-names">Opening Hours:</span> <%= @shop.opening_hours %></li>
+  <li class="shop-field"><span class="profile-field-names">Products & Pricelist</span></li>
+</ul>

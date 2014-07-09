@@ -31,7 +31,6 @@ When(/^the user visits the homepage$/) do
 end
 
 When(/^he signs in$/) do
-  save_and_open_page
   fill_in 'Email', :with => 'merchant@goodbuy.co.uk'
   fill_in 'Password', :with => 'password'
   click_button('Sign in')
