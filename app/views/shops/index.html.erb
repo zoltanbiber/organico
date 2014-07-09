@@ -23,7 +23,7 @@
           <%= shop.address_street %>,
           <%= shop.address_postcode %>
         </span>
-        <a href="#" class="view-button">VIEW</a>
+        <%= link_to "VIEW", shop_path(shop.id), :class => "view-button" %>
         <ul id="tags-container-ul">
             <% shop.tags.each do |tag| %>
               <li id="tags">
@@ -40,4 +40,4 @@
   <section id="map-canvas">
     <p>GOOGLE MAPS<BR /> GOES HERE</p>
   </section>
-<div class="clear-both"></div>
+<div class="clear-both"></div> 
