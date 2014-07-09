@@ -1,6 +1,7 @@
 class Shop < ActiveRecord::Base
   has_many :shop_tags
   has_many :tags, :through => :shop_tags
+  has_many :products
 
   validates :name, :presence => true
   validates :address_city, :presence => true
