@@ -4,8 +4,8 @@ Given(/^that we have some tags$/) do
   @third_tag = Tag.create!(:name => "deli")
 end
 
-Given(/^that we have at least ten shops and they have tags$/) do
-  12.times do
+Given(/^that we have at least five shops and they have tags$/) do
+  6.times do
     Shop.create!(
       name: "Mr O's Organic Emporium", 
       opening_hours: Faker::Lorem.sentence, 
@@ -30,7 +30,14 @@ When(/^the user visits the homepage$/) do
   visit root_path
 end
 
-Then(/^he should see the first ten shops on the page$/) do
+When(/^he signs in$/) do
+  save_and_open_page
+  fill_in 'Email', :with => 'merchant@goodbuy.co.uk'
+  fill_in 'Password', :with => 'password'
+  click_button('Sign in')
+end
+
+Then(/^he should see the first five shops on the page$/) do
   expect(page).to have_content "Mr O's Organic Emporium"
   expect(page).to have_content 'London'
 end

@@ -3,7 +3,7 @@ Feature: Users
   Background:
     Given that we have a logged-in user of type merchant
 
-  @wip
+  
   Scenario: a merchant sees it's profile
     When the merchant clicks on profile navigation link
     Then he is taken to his profile page
