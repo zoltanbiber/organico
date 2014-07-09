@@ -114,6 +114,23 @@ body { height: 100%; margin: 0; padding: 0 }
   font-size: 1.5rem;
  }
 
+ .view-button {
+  float: right;
+  text-decoration: none;
+  color: #00D2B4;
+  border: 1px solid #00D2B4;
+  padding: 6px;
+ }
+
+ .view-button:hover {
+  text-decoration: none;
+  color: white;
+  border: none;
+  background-color: #00D2B4;
+  padding: 6px;
+ }
+
+
  #tags-container-ul {
   margin-top: 5px;
  }
@@ -124,6 +141,7 @@ body { height: 100%; margin: 0; padding: 0 }
   padding: 6px;
   border-radius: 20px;
   background-color: #F1F2F2;
+  margin-bottom: 5px;
  }
 
  .pagination {

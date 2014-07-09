@@ -10,7 +10,7 @@ Feature: Shops
     Then he should see the first five shops on the page
      And he should also see the shops' tags
 
-  @wip
+
   Scenario: a visitor sees the profile of an individual shop
     When the user is on the homepage
       And he clicks on the VIEW button next to a shop's name

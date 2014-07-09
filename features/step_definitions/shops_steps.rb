@@ -5,13 +5,13 @@ Given(/^that we have some tags$/) do
 end
 
 Given(/^that we have at least five shops and they have tags$/) do
-  6.times do
+  5.times do
     Shop.create!(
       name: "Mr O's Organic Emporium", 
-      opening_hours: Faker::Lorem.sentence, 
+      opening_hours: "monday-friday: 08:00-20:00, saturday: 10:00-18:00, sunday: closed", 
       email: "shop@shop.org", 
-      phone: Faker::PhoneNumber.phone_number, 
-      website: Faker::Internet.url, 
+      phone: "020 4545 3333", 
+      website: "www.mrorganic.com", 
       address_city: "London",
       address_street: Faker::Address.street_address,
       address_secondary: Faker::Address.secondary_address,
