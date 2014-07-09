@@ -14,5 +14,12 @@
   <li class="shop-field"><span class="profile-field-names">Email:</span><%= @shop.email %></li>
   <li class="shop-field"><span class="profile-field-names">Website:</span><%= @shop.website %></li>
   <li class="shop-field"><span class="profile-field-names">Opening Hours:</span> <%= @shop.opening_hours %></li>
-  <li class="shop-field"><span class="profile-field-names">Products & Pricelist</span></li>
+  <li class="shop-field">
+    <span id="products-pricelist-text"class="profile-field-names">Products & Pricelist</span>
+    <ul id="products-wrapper">
+      <% @shop.products.each do |product| %>
+        <li><span id="product-name"><%= product.name %></span><span id="product-price"><%= product.currency %><%= product.price %></span></li>
+      <% end %>
+    </ul>
+  </li>
 </ul>
