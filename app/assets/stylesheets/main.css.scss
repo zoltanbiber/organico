@@ -58,7 +58,9 @@ body { height: 100%; margin: 0; padding: 0 }
  #image-strip {
   width: 100%;
   height: 200px;
-  background-image: url(food_bw_936x200.jpg);
+  background: {
+    image:image-url("food_bw_936x200.jpg");
+  }
   color: white;
   text-align: center;
  }
