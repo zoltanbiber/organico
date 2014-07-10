@@ -11,7 +11,7 @@ Heroku: http://hidden-stream-4893.herokuapp.com/
 ## Technologies, Gems, APIs used
 
 BACK-END: Ruby On Rails, PostgreSQL    
-FRONT-END: Javascript, JQuery, Google Maps Javascript API v3
+FRONT-END: Javascript, JQuery, Google Maps Javascript API v3     
 GEMS, TOOLS: rspec-rails, shoulda-matchers, pry-byebug, capybara, devise, cucumber, launchy, will_paginate, geocoder, rails_stdout_logging, simplecov, reset.css, underscore.js, google fonts, heroku
 
 
