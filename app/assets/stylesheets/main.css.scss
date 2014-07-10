@@ -50,6 +50,11 @@ body { height: 100%; margin: 0; padding: 0 }
   color: #204056;
  }
 
+ .hmenu a:hover {
+  border-bottom: 3px solid #00D2B4;
+  padding-bottom: 5px;
+ }
+
  #image-strip {
   width: 100%;
   height: 200px;
