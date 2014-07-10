@@ -18,13 +18,13 @@
       <%= link_to(image_tag("logo_on_green.png"), root_path) %>
       <h1 id="logo">Organico</h1>
       <ul class="hmenu">
-        <li><a href="#">about</a></li>
-        <li><a href="#">food for thought</a></li>
+        <%= render 'devise/menu/login_items' %>
+        <%= render 'devise/menu/registration_items' %>
         <% if user_signed_in? %>
         <li><%= link_to "profile", user_path(current_user.id) %></li>       
         <% end %>
-        <%= render 'devise/menu/registration_items' %>
-        <%= render 'devise/menu/login_items' %>
+        <li><a href="#">food for thought</a></li>
+        <li><a href="#">about</a></li>
       </ul>
 
     </nav>
