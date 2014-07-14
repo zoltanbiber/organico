@@ -28,6 +28,6 @@ Test LOC: 242
 Code To Test Ratio: 1:2.3  
 Test Coverage: 97.78% covered at 1.03 hits/line  
   
-Follow me on Twitter: @ZoltanBiber
+Follow me on Twitter: [@ZoltanBiber](https://twitter.com/ZoltanBiber)
 
 
